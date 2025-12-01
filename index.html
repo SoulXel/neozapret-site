@@ -14,7 +14,7 @@
     <meta name="language" content="Russian">
     <meta name="revisit-after" content="7 days">
     <meta name="rating" content="general">
-    <meta name="yandex-verification" content="c14aedd5bc6eccdc" />
+    
     <!-- Canonical URL -->
     <link rel="canonical" href="https://soulxel.github.io/neozapret-site/">
     
@@ -95,6 +95,35 @@
             "@type": "SearchAction",
             "target": "https://soulxel.github.io/neozapret-site/?q={search_term_string}",
             "query-input": "required name=search_term_string"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Скачать",
+                    "url": "https://soulxel.github.io/neozapret-site/#download"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Возможности",
+                    "url": "https://soulxel.github.io/neozapret-site/#features"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Стратегии обхода",
+                    "url": "https://soulxel.github.io/neozapret-site/#strategies"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Системные требования",
+                    "url": "https://soulxel.github.io/neozapret-site/#requirements"
+                }
+            ]
         }
     }
     </script>
@@ -108,6 +137,21 @@
         "logo": "https://soulxel.github.io/neozapret-site/icon.ico",
         "sameAs": [
             "https://github.com/SoulXel/NeoZapret"
+        ]
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://soulxel.github.io/neozapret-site/"
+            }
         ]
     }
     </script>
@@ -147,6 +191,18 @@
         <!-- Main Content -->
         <main class="main-content">
             <div class="content-wrapper">
+                <!-- Breadcrumbs Navigation -->
+                <nav class="breadcrumbs" aria-label="Навигационная цепочка">
+                    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                            <a itemprop="item" href="https://soulxel.github.io/neozapret-site/">
+                                <span itemprop="name">Главная</span>
+                            </a>
+                            <meta itemprop="position" content="1" />
+                        </li>
+                    </ol>
+                </nav>
+                
                 <!-- Hero Section -->
                 <section class="hero-section">
                     <div class="hero-content">
@@ -310,7 +366,7 @@
                 </section>
 
                 <!-- Strategies Section -->
-                <section class="strategies-section">
+                <section class="strategies-section" id="strategies">
                     <h2 class="section-title">⚙️ Zapret - Стратегии обхода блокировок DPI</h2>
                     
                     <div class="strategies-grid">
@@ -420,7 +476,7 @@
                 </section>
 
                 <!-- System Requirements -->
-                <section class="requirements-section">
+                <section class="requirements-section" id="requirements">
                     <h2 class="section-title">🔧 Системные требования</h2>
                     
                     <div class="requirements-list">
@@ -556,8 +612,7 @@
                         <strong>MIT License</strong> - Проект распространяется свободно в образовательных целях.
                     </p>
                     <p class="warning-text">
-                        ⚠️ <strong>Внимание:</strong> Используйте только для обхода незаконных блокировок. 
-                        Убедитесь, что использование соответствует законам вашей страны.
+                        ⚠️ <strong>Внимание:</strong> Убедитесь, что использование соответствует законам вашей страны.
                     </p>
                 </section>
             </div>
@@ -567,9 +622,3 @@
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
-
-
-
