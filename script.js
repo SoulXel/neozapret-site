@@ -1,9 +1,11 @@
+// NeoZapret Website JavaScript
+// Интерактивность и функциональность
 
 document.addEventListener('DOMContentLoaded', function() {
-
+    // Status Badge Animation
     const statusBadge = document.getElementById('status-badge');
     if (statusBadge) {
-
+        // Симуляция изменения статуса (для демонстрации)
         const statuses = [
             { text: 'Готов к работе', color: 'var(--success)' },
             { text: 'Обход активен', color: 'var(--info)' },
@@ -11,10 +13,16 @@ document.addEventListener('DOMContentLoaded', function() {
         ];
         
         let currentStatus = 0;
-
+        // Раскомментируйте для автоматической смены статуса:
+        // setInterval(() => {
+        //     currentStatus = (currentStatus + 1) % statuses.length;
+        //     const status = statuses[currentStatus];
+        //     statusBadge.querySelector('.status-text').textContent = status.text;
+        //     statusBadge.querySelector('.status-text').style.color = status.color;
+        // }, 3000);
     }
     
-
+    // Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -23,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             const target = document.querySelector(href);
             if (target) {
-                const offsetTop = target.offsetTop - 60; 
+                const offsetTop = target.offsetTop - 60; // Учитываем title bar
                 window.scrollTo({
                     top: offsetTop,
                     behavior: 'smooth'
@@ -32,14 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-
+    // Enhanced Card Hover Effects
     const cards = document.querySelectorAll('.feature-card, .strategy-card, .download-card');
     cards.forEach(card => {
         card.addEventListener('mouseenter', function() {
             this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
         });
         
-
+        // Add ripple effect on click
         card.addEventListener('click', function(e) {
             const ripple = document.createElement('div');
             ripple.style.position = 'absolute';
@@ -59,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-
+    // Add ripple animation
     const style = document.createElement('style');
     style.textContent = `
         @keyframes ripple {
@@ -74,9 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
     
-
+    // Download buttons now have real links - no need to intercept clicks
     
-
+    // Enhanced Intersection Observer for Animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -100px 0px'
@@ -91,15 +99,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }, observerOptions);
     
-
+    // Observe all cards and sections for animation
     const animatedElements = document.querySelectorAll('.feature-card, .strategy-card, .download-card, .requirement-item, .section-title');
     animatedElements.forEach((el, index) => {
         observer.observe(el);
     });
     
-
+    // Parallax effect removed - hero section stays fixed
     
-
+    // Copy to Clipboard for Code Blocks (если будут)
     document.querySelectorAll('code').forEach(code => {
         code.addEventListener('click', function() {
             const text = this.textContent;
@@ -115,29 +123,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-
+    // Console Easter Egg
     console.log('%c🔓 NeoZapret', 'font-size: 20px; font-weight: bold; color: #4A6A8A;');
     console.log('%cОбход блокировок РФ 2025', 'font-size: 12px; color: #9E9E9E;');
     console.log('%cВерсия: 3.2.1', 'font-size: 10px; color: #7A7A7A;');
     console.log('%cGitHub: https://github.com/SoulXel/NeoZapret', 'font-size: 10px; color: #4A6A8A;');
     
-
+    // Keyboard Shortcuts
     document.addEventListener('keydown', function(e) {
-
+        // Ctrl/Cmd + K для поиска (можно добавить поиск)
         if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
             e.preventDefault();
             console.log('Search shortcut pressed');
         }
         
-
+        // Escape для закрытия модальных окон (если будут)
         if (e.key === 'Escape') {
-
+            // Закрыть модальные окна
         }
     });
     
-
+    // Theme Toggle (опционально, если захотите добавить светлую тему)
+    // Можно добавить переключатель темы в будущем
     
-
+    // Performance: Lazy Load Images (если будут добавлены изображения)
     if ('loading' in HTMLImageElement.prototype) {
         const images = document.querySelectorAll('img[loading="lazy"]');
         images.forEach(img => {
@@ -146,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
+// Utility Functions
 function updateStatus(text, color) {
     const statusBadge = document.getElementById('status-badge');
     if (statusBadge) {
@@ -158,9 +167,7 @@ function updateStatus(text, color) {
     }
 }
 
-
+// Export for potential use
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = { updateStatus };
 }
-
-
