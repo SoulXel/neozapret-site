@@ -1037,6 +1037,63 @@ body {
     box-shadow: var(--shadow-sm);
 }
 
+/* Warning Banners */
+.warning-banner {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    background: linear-gradient(135deg, rgba(138, 106, 58, 0.1) 0%, rgba(138, 106, 58, 0.05) 100%);
+    border: 1px solid var(--warning);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-normal);
+}
+
+.warning-banner:hover {
+    border-color: var(--warning);
+    box-shadow: var(--shadow-md);
+    transform: translateX(2px);
+}
+
+.warning-icon {
+    font-size: 24px;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(138, 106, 58, 0.2);
+    border-radius: var(--radius-sm);
+}
+
+.warning-content {
+    flex: 1;
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+}
+
+.warning-content strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.warning-educational {
+    border-color: var(--warning);
+}
+
+.warning-vpn {
+    border-color: var(--info);
+    background: linear-gradient(135deg, rgba(74, 106, 138, 0.1) 0%, rgba(74, 106, 138, 0.05) 100%);
+}
+
+.warning-vpn .warning-icon {
+    background: rgba(74, 106, 138, 0.2);
+}
+
 .warning-text {
     background: linear-gradient(135deg, rgba(138, 106, 58, 0.1) 0%, rgba(138, 106, 58, 0.05) 100%);
     border: 1px solid var(--warning);
@@ -1046,6 +1103,7 @@ body {
     color: var(--text-secondary);
     line-height: 1.7;
     box-shadow: var(--shadow-sm);
+    margin-top: var(--spacing-md);
 }
 
 /* Scrollbar Styling - Enhanced */
