@@ -17,4 +17,3 @@ Allow: /
 # Disallow admin and private areas (if any)
 Disallow: /admin/
 Disallow: /private/
-
