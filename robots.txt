@@ -1,6 +1,9 @@
 User-agent: *
 Allow: /
 
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
 # Sitemap
 Sitemap: https://soulxel.github.io/neozapret-site/sitemap.xml
 
