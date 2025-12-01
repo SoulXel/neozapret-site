@@ -82,15 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     document.head.appendChild(style);
     
-    // Download Buttons - Placeholder functionality
-    const downloadBtns = document.querySelectorAll('.download-btn');
-    downloadBtns.forEach(btn => {
-        btn.addEventListener('click', function(e) {
-            e.preventDefault();
-            // В реальном сайте здесь был бы переход на страницу загрузки
-            alert('В реальном сайте здесь будет ссылка на скачивание приложения.\n\nДля демонстрации: это кнопка загрузки.');
-        });
-    });
+    // Download buttons now have real links - no need to intercept clicks
     
     // Enhanced Intersection Observer for Animations
     const observerOptions = {
