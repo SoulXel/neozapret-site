@@ -139,6 +139,7 @@ body {
 .logo-text {
     font-size: 28px;
     font-weight: 700;
+    display: block;
     color: var(--text-primary);
     margin-bottom: var(--spacing-sm);
     letter-spacing: 2px;
