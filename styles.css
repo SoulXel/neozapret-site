@@ -276,6 +276,62 @@ body {
     margin: 0 auto;
 }
 
+/* Breadcrumbs Navigation */
+.breadcrumbs {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-sm) 0;
+}
+
+.breadcrumbs ol {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+}
+
+.breadcrumbs li {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.breadcrumbs li:not(:last-child)::after {
+    content: '/';
+    color: var(--text-disabled);
+    margin-left: var(--spacing-sm);
+}
+
+.breadcrumbs a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+    position: relative;
+}
+
+.breadcrumbs a:hover {
+    color: var(--text-primary);
+}
+
+.breadcrumbs a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--info);
+    transition: width var(--transition-fast);
+}
+
+.breadcrumbs a:hover::after {
+    width: 100%;
+}
+
 /* Hero Section - Completely Redesigned */
 .hero-section {
     margin-bottom: var(--spacing-3xl);
